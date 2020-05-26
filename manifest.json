@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+
+    "name": "Amazon Price Tracker",
+    "description": "Track amazon item prices, be notified when the prices drop!",
+    "version": "1.0.0",
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "icons": {
+        "16": "icon_16.png",
+        "32": "icon_32.png",
+        "64": "icon_64.png",
+        "128": "icon_128.png"
+    },
+
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Amazon Price Tracker"
+    },
+
+    "permissions": [
+        "activeTab",
+        "storage",
+        "alarms",
+        "webRequest",
+        "*://*.amazon.ca/"
+    ]
+}

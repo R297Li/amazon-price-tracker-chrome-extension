@@ -1,0 +1,198 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 270px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 550px;
+    background-color: white;
+}
+
+.disabled {
+    display: none;
+}
+
+/**** HEADER ****/
+
+.header {
+    background-color: #222222;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.button {
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: #b9b9b9;
+    padding: 6px 8px;
+    margin: 2px;
+    background-color: inherit;
+    letter-spacing: 0.560px;
+}
+
+.button:hover {
+    font-weight: bold;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+
+.dropdown {
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-button {
+    text-decoration: underline;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 450px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+.search-container {
+    width: 60%;
+    border-radius: 4px;
+}
+
+.search {
+    outline: none;
+    border-radius: 4px;
+    padding: 4px 4px;
+    width: 100%;
+    border: 1px solid #777777;
+}
+
+/************/
+
+.content-container {
+    padding: 10px;
+}
+
+.general-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.amazon-item {
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+.amazon-item:hover {
+    cursor: pointer;
+}
+
+.amazon-item.edit:hover {
+    cursor: text;
+}
+
+.update-text {
+    font-size: 0.75rem;
+    font-weight: normal;
+    margin-top: 10px;
+    padding-top: 5px;
+    font-style: italic;
+    vertical-align: middle;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.detail.bordered-detail-2 {
+    border-left: 1px solid #777777;
+    border-right: 1px solid #777777;
+}
+
+.detail.bordered-detail-3 {
+    border-right: 1px solid #777777;
+}
+
+.detail .title {
+    font-size: 1rem;
+    flex-grow: 1;
+    font-weight: bold;
+    color: #777777;
+}
+
+.detail .value {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.amazon-page-container {
+    visibility: hidden;
+}
+
+#amazon-page {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    border-style: none;
+    border: 0;
+}
+
+.refresh-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: bottom;
+    margin-left: 6px;
+    content: url(./refresh.png);
+}
+
+.refresh-icon:hover {
+    cursor: pointer;
+}

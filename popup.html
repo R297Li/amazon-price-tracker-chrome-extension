@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="popup.js"></script>
+    <title>Amazon Price Tracker</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="dropdown">
+                <button class="button dropdown-button">Items
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div id="dropdown-list" class="dropdown-content"></div>
+            </div>
+            <div class="search-container">
+                <input id="amazon-url" type="url" class="search" placeholder="Amazon URL">
+            </div>
+            <button id="add-button" class="button add-button">Add</button>
+            <button id="remove-button" class="button remove-button disabled">Remove</button>
+            <button id="edit-button" class="button edit-button">Edit</button>
+        </div>
+        <div class="content-container">
+            <div class="general-info-container">
+                <div class="general-info">
+                    <div id="item-name" class="amazon-item" contenteditable="false">Item Name</div>
+                </div>
+                <div class="general-info">
+                    <div class="update-text">Last Updated: <span id="updated-time"></span><span id="refresh-button" class="refresh-icon"></span></div>
+                </div>
+            </div>
+            <div class="details-container">
+                <div class="detail">
+                    <div class="title">Lowest Price</div>
+                    <div id="lowest-price" class="value">N/A</div>
+                </div>
+                <div class="detail bordered-detail-2">
+                    <div class="title">Current Price</div>
+                    <div id="current-price" class="value">N/A</div>
+                </div>
+                <div class="detail bordered-detail-3">
+                    <div class="title">Highest Price</div>
+                    <div id="highest-price" class="value">N/A</div>
+                </div>
+                <div class="detail">
+                    <div class="title">Status</div>
+                    <div id="status" class="value">N/A</div>
+                </div>
+            </div>
+        </div>
+        <div class="amazon-page-container">
+            <iframe id="amazon-page"></iframe>
+        </div>
+    </div>
+</body>
+</html>
